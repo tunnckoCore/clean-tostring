@@ -1,0 +1,68 @@
+{
+  "name": "clean-tostring",
+  "version": "0.0.0",
+  "description": "Clean function `toString` from code coverage mess. It can't be ideal, but it's useful in testing process.",
+  "repository": "tunnckoCore/clean-tostring",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "cleanup-coverage-code": "^1.0.3"
+  },
+  "devDependencies": {
+    "assertit": "^0.1.0",
+    "pre-commit": "*"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "clean",
+    "clean-tostring",
+    "cleanup",
+    "code",
+    "cov",
+    "coverage",
+    "coverage-code",
+    "fn",
+    "funcion",
+    "function",
+    "function-tostring",
+    "istanbul",
+    "process",
+    "str",
+    "string",
+    "test",
+    "testing",
+    "tostring",
+    "util",
+    "utility",
+    "utils"
+  ],
+  "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "related": {
+      "list": [
+        "rename-function",
+        "is-bound-function",
+        "bind-context",
+        "smart-bind",
+        "parse-function",
+        "get-fn-name",
+        "function-arguments"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    }
+  }
+}

@@ -16,7 +16,7 @@ npm i clean-tostring --save
 const cleanTostring = require('clean-tostring')
 ```
 
-### [cleanTostring](index.js#L41)
+### [cleanTostring](index.js#L43)
 > Clean coverage code of `fn.toString()`, but be aware of that it remains minified.
 
 **Params**
@@ -28,6 +28,7 @@ const cleanTostring = require('clean-tostring')
 
 ```js
 var cleanup = require('clean-tostring')
+var isIstanbul = process.env.running_under_istanbul
 
 function fixture (a) {
   if (typeof a === 'string') {
@@ -36,12 +37,13 @@ function fixture (a) {
   return false
 }
 
-console.log(cleanup(fixture))
-// => 'function fixture(a) {\n    if (typeof a === \'string\') {\n      return a\n    }\n    return false\n  }'
-
-// and running under istanbul
-console.log(cleanup(fixture))
-// => 'function fixture(a) {if(typeof a===\'string\'){return a;}else{}return false;}'
+if (isIstanbul) {
+  console.log(cleanup(fixture))
+  // => 'function fixture(a) {if(typeof a===\'string\'){return a;}else{}return false;}'
+} else {
+  console.log(cleanup(fixture))
+  // => 'function fixture(a) {\n    if (typeof a === \'string\') {\n      return a\n    }\n    return false\n  }'
+}
 ```
 
 ## Related

@@ -1,6 +1,6 @@
 {
   "name": "clean-tostring",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Clean function `toString` from code coverage mess. It can't be ideal, but it's useful in testing process.",
   "repository": "tunnckoCore/clean-tostring",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
